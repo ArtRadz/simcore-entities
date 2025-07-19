@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf4629e364f9094f889fad33934031b, type: 3}
   m_Name: NewTag
   m_EditorClassIdentifier: 
-  role: 1
+  domains: 0
+  tagID: 2
