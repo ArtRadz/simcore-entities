@@ -5,9 +5,10 @@ using UnityEngine;
 public class Facet : ScriptableObject
 {
     
-    [SerializeField] private TagSO role;
-    [SerializeField] private List<TagSO> aspects;
-    
+    public TagDomain Domain;
+    public TagRole Role;
+    public List<TagSO> Tags;
+
     // OnValidate is a tmp function for testing TODO refactor this please 
     void OnValidate()
     {

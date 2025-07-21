@@ -1,4 +1,2 @@
-public class TagRole
-{
-public enum TagRoles{Material, Environment, Object}
-}
+public enum TagRole
+{Material, Environment, Object}

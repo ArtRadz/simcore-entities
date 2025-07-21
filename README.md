@@ -1,6 +1,6 @@
-# SimCore – Entity System
+# ContextSystem – Entity System
 
-**SimCore** is a modular simulation architecture for Unity that enables emergent interactions between tags, entities, and systems through extensible logic components. This document focuses on the **Entity System**, which forms the foundation for future systems like the **Network System** (relationships, hierarchies, influence) and **Memory System** (episodic recall, attitude shifts).
+\*\*ContextSystem \*\*is a modular simulation architecture for Unity that enables emergent interactions between tags, entities, and systems through extensible logic components. This document focuses on the **Entity System**, which forms the foundation for future systems like the **Network System** (relationships, hierarchies, influence) and **Memory System** (episodic recall, attitude shifts).
 
 It is designed for character-centric simulations with strong support for overlapping group dynamics, cultural logic, and environmental interactions.
 
@@ -12,7 +12,10 @@ It is designed for character-centric simulations with strong support for overlap
 
 Anything within the simulation (e.g., a table, NPC, idea).
 
-- `Entity.cs`: the bridge between SimCore and Unity systems; acts as an attachment that makes a GameObject part of the simulation.
+- An Entity is  a **ScriptableObject blueprint** that carries its facets plus a mutable-data container and exposes a simple `Init()` method.
+- Designers can attach this asset wherever they like, and each instance initializes itself from the stored ranges.
+
+
 
 ### 2. Facet
 
@@ -96,11 +99,13 @@ Examples:
 
 ### Mutator Scopes
 
+WIP
+
 | Scope               | Operates On  | Typical use                     | Priority |
 | ------------------- | ------------ | ------------------------------- | -------- |
 | **RoleMutator**     | Tag ↔ Entity | Hunger reduces Morale each tick | 1        |
 | **DominionMutator** | Tag ↔ Tag    | Fire deals +50% HP to Wood      | 2        |
-| **GlobalMutator**   | World ↔ Tag  | Seasonal decay, weather effects | 3        |
+|                     |              |                                 |          |
 
 > Mutators are executed in priority order. Each type applies a different level of influence.
 
@@ -108,7 +113,7 @@ Examples:
 
 ### ✨ Mutator Primitives (MVP)
 
-SimCore ships with **three** generic mutator types. All higher‑level effects are built on top of these primitives:
+ContextSystem ships with **three** generic mutator types. All higher‑level effects are built on top of these primitives:
 
 | Primitive        | Signature                                                      | Typical Uses                                                             |
 | ---------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -126,7 +131,7 @@ Naming convention: use verb‑based SOs like `ModifyDurability`, `TransferEnergy
 
 ---
 
-### 🔁 Interaction Direction
+### ♻ Interaction Direction
 
 - **Only the source tag defines interaction logic.**
 - A tag (e.g., `Fire`) defines how it affects others (e.g., `Wood`) through its mutators.
@@ -154,7 +159,7 @@ Facet = (TagAsset, Dominion, Role)
 
 ---
 
-## 🧩 Example Entity: `Beautiful Wooden Crate`
+## 🧹 Example Entity: `Beautiful Wooden Crate`
 
 - **Facet 1** → `Wood`, Physical + Material
 
@@ -178,7 +183,7 @@ Facet = (TagAsset, Dominion, Role)
 
 ---
 
-> SimCore is ideal for AI-driven, simulation-heavy games that need rich systemic interaction without hardcoded rules. Whether you’re building a society sim, cultural sandbox, or emergent narrative engine—SimCore is your scaffolding.
+> ContextSystem is ideal for AI-driven, simulation-heavy games that need rich systemic interaction without hardcoded rules. Whether you’re building a society sim, cultural sandbox, or emergent narrative engine—ContextSystem is your scaffolding.
 
 ---
 

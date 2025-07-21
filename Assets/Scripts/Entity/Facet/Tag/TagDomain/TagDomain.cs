@@ -1,4 +1,3 @@
-public class TagDomain
-{
-    public enum TagDomains {Physical,Mental,Social}
-}
+
+    public enum TagDomain {Physical,Mental,Social}
+

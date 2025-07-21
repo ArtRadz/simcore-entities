@@ -4,6 +4,6 @@ public class TagID
 {
     public enum TagId
     {
-       Wood,Iron,Beauty 
+       Wood,Iron,Beauty,Fire
     }
 }
