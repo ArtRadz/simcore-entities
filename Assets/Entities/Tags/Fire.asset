@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf4629e364f9094f889fad33934031b, type: 3}
+  m_Name: Fire
+  m_EditorClassIdentifier: 
+  tagID: 3
+  alowedDomains: 0000000001000000
+  alowedRoles: 0100000002000000
+  slices:
+  - domain: 0
+    role: 3
+    variables: []
+    rules:
+    - targetTags:
+      - {fileID: 11400000, guid: 2ef8733f1b2c7f34a923dba2850c6c2d, type: 2}
+      actionTag: {fileID: 11400000, guid: 419f83b7aa7945b419b20a22954db5e9, type: 2}
+      amount: 5
+    seedRules: []

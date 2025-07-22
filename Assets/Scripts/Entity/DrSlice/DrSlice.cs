@@ -11,8 +11,10 @@ public class DrSlice
     [Tooltip("Stats this slice seeds into the entity")]
     public List<VariableSpec> variables = new();
 
-    [Tooltip("Context-specific interaction rules")]
+    [Tooltip("Context-specific interaction rules used on another TAG of another entity")]
     public List<InteractionRule> rules = new();
+    [Tooltip("Context-specific interaction rules used on another TAG of same entity")]
+    public List<SeedRule> seedRules;
 }
 [Serializable] public struct VariableSpec
 {
@@ -23,6 +25,12 @@ public class DrSlice
 }
 
 [Serializable] public struct InteractionRule
+{
+    public List<TagSO>   targetTags;   
+    public TagSO actionTag;     
+    public float   amount; 
+}
+[Serializable] public struct SeedRule
 {
     public List<TagSO>   targetTags;   
     public TagSO actionTag;     

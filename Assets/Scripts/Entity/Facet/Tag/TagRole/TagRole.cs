@@ -1,2 +1,2 @@
 public enum TagRole
-{Material, Environment, Object, Action}
+{Material, Environment, Object, Action, Stat}

@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcf4629e364f9094f889fad33934031b, type: 3}
-  m_Name: Fire
+  m_Name: Damage
   m_EditorClassIdentifier: 
-  alowedRoles: 010000000300000002000000
-  alowedDomains: 0000000001000000
-  tagID: 3
+  tagID: 4
+  alowedDomains: 00000000
+  alowedRoles: 03000000
   slices:
   - domain: 0
     role: 3
-    variables: []
+    variables:
+    - min: 0.1
+      max: 70
     rules:
     - targetTags: []
-      actionTag: {fileID: 0}
-      amount: 0
+      actionTag: {fileID: 11400000, guid: 5876529cc72f6834083d4003c0a0fc4e, type: 2}
+      amount: 20
+    seedRules: []
