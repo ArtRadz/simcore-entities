@@ -10,17 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcf4629e364f9094f889fad33934031b, type: 3}
-  m_Name: NewTag
+  m_Name: Damage
   m_EditorClassIdentifier: 
-  alowedRoles: 00000000
-  alowedDomains: 00000000
+  alowedRoles: 
+  alowedDomains: 
   tagID: 0
-  slices:
-  - domain: 0
-    role: 0
-    variables:
-    - min: 0
-      max: 0
-    rules:
-    - targetTag: {fileID: 0}
-      amount: 0
+  slices: []

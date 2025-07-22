@@ -16,7 +16,7 @@ public class DrSlice
 }
 [Serializable] public struct VariableSpec
 {
-    public TagID stat;
+    public TagID influensedTag;
     public float min;
     public float max;
     public float Default => UnityEngine.Random.Range(min, max);
@@ -24,7 +24,7 @@ public class DrSlice
 
 [Serializable] public struct InteractionRule
 {
-    public TagSO   targetTag;   
-    public Mutator mutator;     
+    public List<TagSO>   targetTags;   
+    public TagSO actionTag;     
     public float   amount; 
 }
