@@ -7,7 +7,6 @@ public class Entity : MonoBehaviour
 {
     [SerializeField] public List<Facet> facets;
     private EntityInitializer init;
-    public 
 
     private void Awake()
     {
