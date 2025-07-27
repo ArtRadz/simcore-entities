@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class Facet : ScriptableObject
 {
+    private FacetData data = new FacetData();
     
     public TagDomain Domain;
     public TagRole Role;
     public List<TagSO> Tags;
 
-    // OnValidate is a tmp function for testing TODO refactor this please 
-    void OnValidate()
+    public void Init()
     {
-        // if (role != null && (role.Domains & TagDomain.TagDomains.Role) == 0)
-        // {
-        //     Debug.LogError($"Facet `{name}`: Assigned tag `{role.name}` lacks TagDomain.Role flag — clearing field.");
-        //     role = null;  
-        // }
-        //
-        // aspects.RemoveAll(a => a != null && (a.Domains & TagDomain.TagDomains.Aspect) == 0);
+        foreach (TagSO tag in Tags)
+        {
+            data.FacetTagsByID[tag.tagID]=tag;
+        }
     }
 }

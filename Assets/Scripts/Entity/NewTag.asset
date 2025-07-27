@@ -15,4 +15,4 @@ MonoBehaviour:
   tagID: 0
   alowedDomains: 
   alowedRoles: 
-  slices: []
+  mutators: []

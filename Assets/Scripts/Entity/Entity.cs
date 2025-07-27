@@ -1,12 +1,10 @@
-using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-    [SerializeField] public List<Facet> facets;
-    private EntityInitializer init;
+    [SerializeField] public List<Facet> facets = new List<Facet>();
+    private EntityInitializer init = new EntityInitializer();
 
     private void Awake()
     {
