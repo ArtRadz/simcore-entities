@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class Mutator 
 {
-    public enum MutatorID {Decrease, Increase,Transform,Consume}
     [Serializable]
     public struct MutatorBinding
     {
-        [SerializeField] public MutatorID mutator;
-        [SerializeField] public TagID.TagId targetTags;
+        [SerializeField] public ActionTag.TagID action;
+        [SerializeField] public DomainTag.TagID domain;
+        [SerializeField] public ConceptTag.TagID target;
+        [SerializeField] public ConceptTag.TagID instigator;
         [SerializeField] public float mutatorValue;
     }
 }
