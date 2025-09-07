@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8971430c614f44b949c2841b0dcdc2, type: 3}
   m_Name: NewConcept
   m_EditorClassIdentifier: 
-  conceptID: {fileID: 0}
+  conceptID: 0
+  links:
+  - {fileID: 11400000, guid: e1a90db090542f944927616ff94955d4, type: 2}
